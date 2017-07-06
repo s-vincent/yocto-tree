@@ -1,4 +1,4 @@
 SANITY_VERSION 1
 TMPDIR /home/seb/git_work/yocto-tree/rpi3-build/tmp
 SSTATE_DIR /home/seb/git_work/yocto-tree/rpi3-build/sstate-cache
-NATIVELSBSTRING debian-9
+NATIVELSBSTRING debian
