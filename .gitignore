@@ -1,1 +1,12 @@
 dl/
+yocto-poky/
+meta-openembedded/
+meta-raspberrypi/
+meta-raspberrypi-rt-sv/
+meta-softwares-sv/
+rpi3-build/tmp
+rpi3-build/cache
+rpi3-build/sstate-cache
+rpi3-64-build/tmp
+rpi3-64-build/cache
+rpi3-64-build/sstate-cache
