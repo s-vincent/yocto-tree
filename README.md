@@ -18,7 +18,7 @@ git clone https://github.com/s-vincent/yocto-tree.git
 cd yocto-tree
 ```
 
-Clone the yocto-poky and meta-softwares-sv repository:
+Clone yocto-poky, meta-openembedded and meta-softwares-sv repositories:
 
 ```
 git clone -b rocko git://git.yoctoproject.org/poky.git yocto-poky
@@ -120,5 +120,6 @@ Please look at https://github.com/s-vincent/meta-softwares-sv.
 
 * https://www.yoctoproject.org/docs/2.3/mega-manual/mega-manual.html
 * https://github.com/s-vincent/meta-raspberrypi-rt-sv/
+* https://github.com/s-vincent/meta-beaglebone-rt-sv/
 * https://github.com/s-vincent/meta-softwares-sv/
 
