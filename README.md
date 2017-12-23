@@ -118,7 +118,7 @@ Please look at https://github.com/s-vincent/meta-softwares-sv.
 
 ## Links
 
-* https://www.yoctoproject.org/docs/2.3/mega-manual/mega-manual.html
+* https://www.yoctoproject.org/docs/2.4/mega-manual/mega-manual.html
 * https://github.com/s-vincent/meta-raspberrypi-rt-sv/
 * https://github.com/s-vincent/meta-beaglebone-rt-sv/
 * https://github.com/s-vincent/meta-softwares-sv/
