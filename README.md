@@ -7,7 +7,8 @@ Yocto development tree.
 Following custom boards are supported:
 - Raspberry Pi 3 32-bit (rpi-4.9.y-RT, rpi-4.9.y-ipipe);
 - Raspberry Pi 3 64-bit (rpi-4.9.y-RT);
-- BeagleBone Black (4.14.y-RT, 4.9.y-ipipe).
+- BeagleBone Black (4.14.y-RT, 4.9.y-ipipe);
+- Olinuxino Lime2 (4.14.y-RT).
 
 ## Setup
 
@@ -38,6 +39,13 @@ For BeagleBone boards, clone meta-beaglebone-rt-sv repositoriy:
 
 ```
 git clone https://github.com/s-vincent/meta-beaglebone-rt-sv.git
+```
+
+For Olinuxino boards, clone meta-sunxi and meta-olinuxino-rt-sv repositories:
+
+```
+git clone https://github.com/s-vincent/meta-olinuxino-rt-sv.git
+git clone https://github.com/linux-sunxi/meta-sunxi
 ```
 
 ## Raspberry Pi 3 boards
@@ -110,6 +118,28 @@ previous section.
 Note (2): to use *-xenomai image, be sure to set I-pipe/Xenomai kernel as 
 specified in  previous section. 
 
+## Olinuxino
+
+### Build environment
+
+Set the environment:
+
+`source ./yocto-poky/oe-init-build-env ./olinuxino-build/`
+
+To use a 4.14.x PREEMPT-RT kernel, modify conf/local.conf and adds:
+
+`PREFERRED_PROVIDER_virtual/kernel := "linux-mainline-rt"`
+
+### Images available
+
+* olinuxino-hwup-image-rt (same as core-image-minimal buth with PREEMPT-RT
+kernel and rt-tests suite);
+* olinuxino-basic-image-rt (same as basic-image but with PREEMPT-RT kernel and
+rt-tests suite);
+
+Note: to use *-rt image, be sure to set PREEMPT-RT kernel as specified in 
+previous section. 
+
 ## Softwares
 
 There is some additionnals sample softwares in meta-softwares-sv repository.
@@ -121,5 +151,6 @@ Please look at https://github.com/s-vincent/meta-softwares-sv.
 * https://www.yoctoproject.org/docs/2.4/mega-manual/mega-manual.html
 * https://github.com/s-vincent/meta-raspberrypi-rt-sv/
 * https://github.com/s-vincent/meta-beaglebone-rt-sv/
+* https://github.com/s-vincent/meta-olinuxino-rt-sv/
 * https://github.com/s-vincent/meta-softwares-sv/
 
