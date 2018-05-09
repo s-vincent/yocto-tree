@@ -44,8 +44,8 @@ git clone https://github.com/s-vincent/meta-beaglebone-rt-sv.git
 For Olinuxino boards, clone meta-sunxi and meta-olinuxino-rt-sv repositories:
 
 ```
+git clone -b rocko https://github.com/linux-sunxi/meta-sunxi
 git clone https://github.com/s-vincent/meta-olinuxino-rt-sv.git
-git clone https://github.com/linux-sunxi/meta-sunxi
 ```
 
 ## Raspberry Pi 3 boards
