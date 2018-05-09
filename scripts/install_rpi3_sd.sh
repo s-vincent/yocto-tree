@@ -21,27 +21,27 @@ fi
 
 # bootloader
 echo "Copy bootloader files..."
-cp tmp/deploy/images/raspberrypi3*/bcm*dtb /media/seb/BOOT/
-cp tmp/deploy/images/raspberrypi3*/bcm2835-bootfiles/* /media/seb/BOOT/
-mkdir -p /media/seb/BOOT/overlays/
-cp tmp/deploy/images/raspberrypi3*/[a-z]*.dtbo /media/seb/BOOT/overlays/
+cp tmp/deploy/images/raspberrypi3*/bcm*dtb /media/$user/BOOT/
+cp tmp/deploy/images/raspberrypi3*/bcm2835-bootfiles/* /media/$user/BOOT/
+mkdir -p /media/$user/BOOT/overlays/
+cp tmp/deploy/images/raspberrypi3*/[a-z]*.dtbo /media/$user/BOOT/overlays/
 
 if [ ! -f tmp/deploy/images/raspberrypi3*/u-boot.bin ]; then
-  cp tmp/deploy/images/raspberrypi3*/Image /media/seb/BOOT/kernel7.img
+  cp tmp/deploy/images/raspberrypi3*/Image /media/$user/BOOT/kernel7.img
 else
-  cp tmp/deploy/images/raspberrypi3*/*Image /media/seb/BOOT/
-  cp tmp/deploy/images/raspberrypi3*/boot.scr /media/seb/BOOT/
+  cp tmp/deploy/images/raspberrypi3*/*Image /media/$user/BOOT/
+  cp tmp/deploy/images/raspberrypi3*/boot.scr /media/$user/BOOT/
 
   if [ -f tmp/deploy/images/raspberrypi3-64/Image ]; then
-    cp tmp/deploy/images/raspberrypi3*/u-boot.bin /media/seb/BOOT/kernel8.img
+    cp tmp/deploy/images/raspberrypi3*/u-boot.bin /media/$user/BOOT/kernel8.img
   else
-    cp tmp/deploy/images/raspberrypi3*/u-boot.bin /media/seb/BOOT/kernel7.img
+    cp tmp/deploy/images/raspberrypi3*/u-boot.bin /media/$user/BOOT/kernel7.img
   fi
 fi
 
 # image and kernel modules
 echo "Copy image and kernel modules files..."
-tar -C /media/seb/ROOT/ -xjf tmp/deploy/images/raspberrypi3*/$1.tar.bz2
+tar -C /media/$user/ROOT/ -xjf tmp/deploy/images/raspberrypi3*/$1.tar.bz2
 
 echo "Syncing!"
 sync

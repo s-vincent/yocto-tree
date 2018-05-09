@@ -21,13 +21,13 @@ fi
 
 # bootloader
 echo "Copy bootloader files..."
-cp tmp/deploy/images/beaglebone/MLO /media/seb/BOOT
-cp tmp/deploy/images/beaglebone/u-boot.img /media/seb/BOOT/
+cp tmp/deploy/images/beaglebone/MLO /media/$user/BOOT
+cp tmp/deploy/images/beaglebone/u-boot.img /media/$user/BOOT/
 
 # image and kernel modules
 echo "Copy image and kernel modules files..."
-tar -C /media/seb/ROOT/ -xjf tmp/deploy/images/beaglebone/$1.tar.bz2
-#tar -C /media/seb/ROOT/ -xzf tmp/deploy/images/beaglebone/modules-beaglebone.tgz 
+tar -C /media/$user/ROOT/ -xjf tmp/deploy/images/beaglebone/$1.tar.bz2
+#tar -C /media/$user/ROOT/ -xzf tmp/deploy/images/beaglebone/modules-beaglebone.tgz 
 
 echo "Syncing!"
 sync
