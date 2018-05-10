@@ -5,8 +5,9 @@ Yocto development tree.
 ## Boards
 
 Following custom boards are supported:
-- Raspberry Pi 3 32-bit (rpi-4.9.y-RT, rpi-4.9.y-ipipe);
-- Raspberry Pi 3 64-bit (rpi-4.9.y-RT);
+- Raspberry Pi 3 32-bit (rpi-4.14.y-RT, rpi-4.9.y-RT, rpi-4.9.y-ipipe);
+- Raspberry Pi 3 64-bit (rpi-4.14.y-RT, rpi-4.9.y-RT);
+- Raspberry Pi 0 wireless (rpi-4.14.y-RT, rpi-4.9.y-RT);
 - BeagleBone Black (4.14.y-RT, 4.9.y-ipipe);
 - Olinuxino Lime2 (4.14.y-RT).
 
@@ -48,21 +49,29 @@ git clone -b rocko https://github.com/linux-sunxi/meta-sunxi
 git clone https://github.com/s-vincent/meta-olinuxino-rt-sv.git
 ```
 
-## Raspberry Pi 3 boards
+## Raspberry Pi 3 and 0 boards
 
 ### Build environment
 
 Set the environment:
 
-* For 32-bit:
+* For Pi 3 32-bit:
 `source ./yocto-poky/oe-init-build-env ./rpi3-build/`
 
-* For 64-bit:
+* For Pi 3 64-bit:
 `source ./yocto-poky/oe-init-build-env ./rpi3-64-build/`
 
-To use a 4.9.x PREEMPT-RT kernel, modify conf/local.conf and adds:
+* For Pi 0 :
+`source ./yocto-poky/oe-init-build-env ./rpi0w-build/`
+
+To use a 4.14.x PREEMPT-RT kernel, modify conf/local.conf and adds:
 
 `PREFERRED_PROVIDER_virtual/kernel := "linux-raspberrypi-rt"`
+
+To use a 4.9.x PREEMPT-RT kernel instead, adds:
+
+`PREFERRED_PROVIDER_virtual/kernel := "linux-raspberrypi-rt"`
+`PREFERRED_VERSION_linux-raspberrypi-rt := "4.9%"
 
 To use a 4.9.x I-pipe/Xenomai kernel, modify conf/local.conf and adds:
 
