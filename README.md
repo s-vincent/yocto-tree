@@ -23,8 +23,8 @@ cd yocto-tree
 Clone yocto-poky, meta-openembedded and meta-softwares-sv repositories:
 
 ```
-git clone -b rocko git://git.yoctoproject.org/poky.git yocto-poky
-git clone -b rocko git://git.openembedded.org/meta-openembedded
+git clone git://git.yoctoproject.org/poky.git yocto-poky
+git clone git://git.openembedded.org/meta-openembedded
 git clone https://github.com/s-vincent/meta-softwares-sv.git
 ```
 
@@ -32,7 +32,7 @@ For Raspberry Pi 3 boards, clone meta-raspberrypi and meta-raspberrypi-rt-sv
 repositories:
 
 ```
-git clone -b rocko git://git.yoctoproject.org/meta-raspberrypi.git
+git clone -b git://git.yoctoproject.org/meta-raspberrypi.git
 git clone https://github.com/s-vincent/meta-raspberrypi-rt-sv.git
 ```
 
@@ -45,7 +45,7 @@ git clone https://github.com/s-vincent/meta-beaglebone-rt-sv.git
 For Olinuxino boards, clone meta-sunxi and meta-olinuxino-rt-sv repositories:
 
 ```
-git clone -b rocko https://github.com/linux-sunxi/meta-sunxi
+git clone -b https://github.com/linux-sunxi/meta-sunxi
 git clone https://github.com/s-vincent/meta-olinuxino-rt-sv.git
 ```
 
