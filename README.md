@@ -16,15 +16,15 @@ Following custom boards are supported:
 Clone this yocto-tree repository and enter the directory:
 
 ```
-git clone https://github.com/s-vincent/yocto-tree.git
+git clone -b thud https://github.com/s-vincent/yocto-tree.git
 cd yocto-tree
 ```
 
 Clone yocto-poky, meta-openembedded and meta-softwares-sv repositories:
 
 ```
-git clone git://git.yoctoproject.org/poky.git yocto-poky
-git clone git://git.openembedded.org/meta-openembedded
+git clone -b thud git://git.yoctoproject.org/poky.git yocto-poky
+git clone -b thud git://git.openembedded.org/meta-openembedded
 git clone https://github.com/s-vincent/meta-softwares-sv.git
 ```
 
@@ -32,21 +32,21 @@ For Raspberry Pi 3 boards, clone meta-raspberrypi and meta-raspberrypi-rt-sv
 repositories:
 
 ```
-git clone -b git://git.yoctoproject.org/meta-raspberrypi.git
-git clone https://github.com/s-vincent/meta-raspberrypi-rt-sv.git
+git clone -b thud git://git.yoctoproject.org/meta-raspberrypi.git
+git clone -b thud https://github.com/s-vincent/meta-raspberrypi-rt-sv.git
 ```
 
 For BeagleBone boards, clone meta-beaglebone-rt-sv repositoriy:
 
 ```
-git clone https://github.com/s-vincent/meta-beaglebone-rt-sv.git
+git clone -b thud https://github.com/s-vincent/meta-beaglebone-rt-sv.git
 ```
 
 For Olinuxino boards, clone meta-sunxi and meta-olinuxino-rt-sv repositories:
 
 ```
-git clone -b https://github.com/linux-sunxi/meta-sunxi
-git clone https://github.com/s-vincent/meta-olinuxino-rt-sv.git
+git clone -b thud https://github.com/linux-sunxi/meta-sunxi
+git clone -b thud https://github.com/s-vincent/meta-olinuxino-rt-sv.git
 ```
 
 ## Raspberry Pi 3 and 0 boards
